@@ -10,7 +10,7 @@ function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post('https://portfolio-v-backend.vercel.app', { name, email, message })
+      .post('https://portfolio-v-backend.vercel.app/submit-contact', { name, email, message })
       .then((res) => {
         alert("Message sent successfully!");
         setName("");
