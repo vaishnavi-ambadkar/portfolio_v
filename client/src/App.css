@@ -1,0 +1,93 @@
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  background-color: #fafafa; /* Very light grey background */
+}
+
+/* Logo settings */
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  transition: filter 300ms, transform 200ms ease-in-out;
+  will-change: filter, transform;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em rgba(128, 128, 128, 0.5)); /* Grey shadow */
+  transform: scale(1.05); /* Slight zoom effect for elegance */
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em rgba(169, 169, 169, 0.5)); /* Darker grey for React */
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+/* Card styling */
+.card {
+  background-color: #ffffff; /* White background for cards */
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  padding: 2em;
+  margin: 1.5em 0;
+  transition: transform 200ms ease, box-shadow 200ms ease;
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Slight upward movement on hover */
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1); /* Increased shadow on hover */
+}
+
+/* Link & Text styling */
+.read-the-docs {
+  color: #555555; /* Mid-grey text for readability */
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 200ms ease;
+}
+
+.read-the-docs:hover {
+  color: #888888; /* Slightly lighter grey on hover */
+}
+
+/* General Body Styling */
+body {
+  background-color: #fafafa; /* Light grey background */
+  margin: 0;
+  font-family: 'Helvetica', sans-serif;
+  color: #333; /* Dark grey text */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #root {
+    padding: 1rem;
+  }
+
+  .card {
+    padding: 1.5em;
+  }
+
+  .logo {
+    height: 5em;
+    padding: 1em;
+  }
+}
