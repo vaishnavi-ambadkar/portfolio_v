@@ -12,7 +12,7 @@ const port = 5000;
 app.use(bodyParser.json());  // Parse JSON datamongodb+srv://<db_username>:<db_password>@cluster.hozl3.mongodb.net/?retryWrites=true&w=majority&appName=Cluster
 app.use(cors(
     {
-        origin: [""],
+        origin: ["https://portfolio-v-frontend.vercel.app"],
         methods: ["POST","GET"],
         credentials: true
     }
