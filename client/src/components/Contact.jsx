@@ -5,11 +5,12 @@ function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  axios.defaults.withCredentials = true;
 
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:5000/submit-contact", { name, email, message })
+      .post('https://portfolio-v-backend.vercel.app', { name, email, message })
       .then((res) => {
         alert("Message sent successfully!");
         setName("");
